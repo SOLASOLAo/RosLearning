@@ -29,7 +29,8 @@ RosLearning/
 │   ├── 01-ROS2基础.md         # 节点/话题/talker-listener
 │   ├── 02-MoveIt部署与演示.md  # MoveIt 安装、Panda 演示、RViz 操作
 │   ├── 03-珞石SR5部署记录.md   # rokae_ros2 下载、编译、fake/真机启动
-│   └── 04-踩坑记录.md          # memlock 权限、进程污染、RViz 卡顿、编译卡死
+│   ├── 04-踩坑记录.md          # memlock 权限、进程污染、RViz 卡顿、编译卡死
+│   └── 05-MoveIt快速入门-RViz教程笔记.md  # 官方 Quickstart 教程中文笔记
 ├── scripts/                  # 可复现的部署脚本
 │   ├── setup_moveit.sh       # 安装 MoveIt 2 + Panda 演示包
 │   ├── setup_rokae.sh        # 下载并编译珞石 rokae_ros2（含 SDK）
