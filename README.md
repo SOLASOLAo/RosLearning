@@ -1,5 +1,8 @@
 # ROS 2 Humble + MoveIt 2 学习笔记（含珞石 SR5 部署）
 
+> ## 📖 日常使用请先看：[日常操作指导.md](日常操作指导.md)
+> 包含：环境加载、各场景启动命令、真机安全守则、防卡死规矩、故障排查。
+
 在 Ubuntu 22.04 + ROS 2 Humble 上，从零开始学习 ROS 2、部署 MoveIt 2，
 并完成珞石（Rokae）xMate SR5-5 机械臂的 ROS 2 软件栈部署的完整记录。
 
@@ -21,6 +24,7 @@
 ```
 RosLearning/
 ├── README.md                 # 本文件：总览与学习路线
+├── 日常操作指导.md            # ⭐ 日常使用手册（手动操作步骤全在这）
 ├── notes/                    # 中文学习笔记
 │   ├── 01-ROS2基础.md         # 节点/话题/talker-listener
 │   ├── 02-MoveIt部署与演示.md  # MoveIt 安装、Panda 演示、RViz 操作
