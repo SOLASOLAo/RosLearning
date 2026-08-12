@@ -133,3 +133,25 @@ MotionPlanning 面板底部有 **Joints** 标签页：
 4. Plan → （检查轨迹）→ Execute；速度默认只有 10%
 5. Use Cartesian Path = 末端走直线
 6. 零空间探索滑块只在冗余机械臂（如 7 轴 Panda）上有意义
+
+## 常见问题：点了 Plan 但看不到轨迹
+
+**现象**：Planning 标签页点 Plan 后，终端/move_group 日志显示
+`Motion plan was computed successfully`，但 RViz 里看不到任何轨迹。
+
+**原因**：教程 Step 3 碰撞实验让你取消勾选
+`Planned Path → Show Robot Visual`，Step 4 之前需要**重新勾选**，忘了就看不到轨迹。
+
+**排查清单**（Displays 面板 → MotionPlanning）：
+1. `Planned Path → Show Robot Visual` = ✅（最关键）
+2. `Planned Path → Trajectory Topic` = `/display_planned_path`
+3. `Planning Request → Query Goal State` = ✅
+4. `Planning Request → Planning Group` = `panda_arm`
+5. `Global Options → Fixed Frame` = `panda_link0`
+6. 想看轨迹尾迹：勾选 `Planned Path → Show Trail`
+
+**终极解决**：重启 demo 用默认完整配置（不带 rviz_config 参数）：
+```bash
+ws_tutorials
+ros2 launch moveit2_tutorials demo.launch.py
+```
